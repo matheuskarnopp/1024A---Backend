@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/matheuskarnopp/1024A---Backend/issues"
   },
-  "homepage": "https://github.com/matheuskarnopp/1024A---Backend#readme"
+  "homepage": "https://github.com/matheuskarnopp/1024A---Backend#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.18.0"
+  }
 }
