@@ -35,8 +35,7 @@ pessoa.nome = "Terezinho"
 
 const cloudVoadora:any = []
 
-const batataVoadora:undefined = undefined
-//♥♥♥♥♥♥
+const batataVoadora:undefined = undefined//♥♥♥♥♥♥
 
 // import express from "express"
 // const app = express()
