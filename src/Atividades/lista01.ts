@@ -67,16 +67,13 @@ interface Pessoa{
     nome: string,
     idade: number
 }
-const pessoa1: Pessoa = {id: 1, nome: 'João', idade: 20}
-const pessoa2: Pessoa = {id: 2, nome: 'Maria', idade: 18}
-const pessoa3: Pessoa = {id: 3, nome: 'José', idade: 17}
 
 function MaiorDeIdade(vetor:Pessoa[], pessoa1:Pessoa, pessoa2:Pessoa, pessoa3:Pessoa) {
     const element:number[] = []
     for (let i = 0; i < vetor.length; i++) {
         const elementos = vetor[i]
         elementos?.idade
-        if( <= 18){
+        if(i <= 18){
 
         }
     }
