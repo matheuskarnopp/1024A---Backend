@@ -1,31 +1,30 @@
 {
-  "name": "1024a---backend",
+  "name": "1024a-backend",
   "version": "1.0.0",
   "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "tsx src/index.ts",
-    "lista": "tsx src/Atividades/lista01.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matheuskarnopp/1024A---Backend.git"
+    "url": "git+https://github.com/guilhermeterenciani/1024a-backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/matheuskarnopp/1024A---Backend/issues"
+    "url": "https://github.com/guilhermeterenciani/1024a-backend/issues"
   },
-  "homepage": "https://github.com/matheuskarnopp/1024A---Backend#readme",
+  "homepage": "https://github.com/guilhermeterenciani/1024a-backend#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "mysql2": "^3.20.0"
+    "mysql2": "^3.18.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.3.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }

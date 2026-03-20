@@ -11,14 +11,12 @@ const connection = await mysql.createConnection({
 // Using placeholders
 try {
   const queryPrepare = await connection.prepare(
-    'SELECT * FROM `table` WHERE `name` = ? AND `age` > ?',
-    ['Page', 45]
+    'SELECT * FROM `pessoa`'
   );
-
+  const results = await queryPrepare.execute([])
   console.log(results);
 } catch (err) {
   console.log(err);
 }
-
 // Close the connection
 await connection.end();
