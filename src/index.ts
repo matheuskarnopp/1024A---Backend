@@ -28,6 +28,9 @@ try {
 
 
 } catch (err) {
+  // if(err instanceof Error){
+  //   if(err.)
+  // }
   console.log(err);
 }
 // Close the connection
