@@ -20,7 +20,8 @@
   "homepage": "https://github.com/guilhermeterenciani/1024a-backend#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "mysql2": "^3.18.0"
+    "mysql2": "^3.18.0",
+    "node": "^25.7.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
