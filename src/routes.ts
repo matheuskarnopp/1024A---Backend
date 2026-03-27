@@ -1,0 +1,53 @@
+import { Router } from "express";
+
+import mysql, { type RowDataPacket, type Connection, type ResultSetHeader } from "mysql2/promise";
+
+//Valide o ID e NOME para nao serem vazios Erro ao passar o id ou o nome
+
+import express from 'express';
+const app = express()
+app.use(express.json)
+
+const routes = Router();
+
+////////////
+interface IPessoa extends RowDataPacket {
+  id: number;
+  nome: "string";
+}
+
+////////////
+
+const connection = mysql.createPool({
+  host: "localhost",
+  user: "root",
+  database: "luademel",
+});
+routes.get("/pessoas", async (req, res) => {
+  try {
+    const [dados, campos] = await connection.execute<IPessoa[]>(
+      "SELECT * FROM pessoa",
+  );
+    res.status(200).json(dados);
+    await connection.end()
+  } catch (err) {
+   console.log(err)
+}
+});
+
+routes.post("/pessoas", async(req,res) => {
+  let {id,nome} = req.body
+  try{
+  const [result] =
+    await connection
+    .execute<ResultSetHeader>('INSERT INTO pessoa (id,nome) VALUES (?,?)',[id,nome])
+  if(result.affectedRows == 0){
+    return res.status(201).json({mensagem:"Sucesso ao inserir!"})
+  }
+    return res.status(500).json({mensagem:"Erro ao inserir"})
+  }catch(err){
+    return res.status(500).json({mensagem:"erro ao inserir", error:err})
+  }
+});
+
+export default routes;
